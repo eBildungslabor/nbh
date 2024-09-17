@@ -14,21 +14,25 @@
     <main class="container">
         <h1>Dein Ergebnis</h1>
 
-        <p>Hier ist eine Beschreibung des Lernvorhabens, die du als Grundlage zur Konzeption deiner Lernveranstaltung gemeinsam mit Kolleg*innen nutzen kannst. Du kannst dir den Text auch kopieren und als Eingabe für ein KI-Sprachmodell nutzen, um Ideen zu generieren.</p>
+        <p>Hier ist eine Beschreibung des Lernvorhabens, die du als Grundlage zur Konzeption deiner Lernveranstaltung gemeinsam mit Kolleg*innen nutzen kannst. Du kannst dir den Text auch kopieren und als Eingabe für ein KI-Sprachmodell nutzen.</p>
 
-        <!-- Textfeld, in das der komplette Prompt dynamisch eingefügt wird -->
-        <textarea id="resultTextArea" rows="10" readonly style="width:100%;"></textarea>
+        <div id="resultContainer">
+            <p id="resultText">
+                Es soll eine Lernveranstaltung konzipiert werden zum Thema: <span id="outputTopic"></span>.<br>
+                Lernziele sind insbesondere:<br>
+                1. Ein grundsätzliches Verständnis der Technologie. Insbesondere ein Verständnis, dass <span id="outputUnderstanding"></span>.<br>
+                2. Anwendungs- und Nutzungskompetenz, wozu insbesondere gehört: <span id="outputSkills"></span>.<br>
+                3. Reflexion zu den Gestaltungsmöglichkeiten und gesamtgesellschaftlichen Folgen unter Berücksichtigung von: <span id="outputReflection"></span>.<br>
+                  Bitte generiere eine Liste mit 15 kreativen, prägnant formulierten Ideen für Lernangebote, die in non-formalen Umgebungen wie Bibliotheken umgesetzt werden können. Die Ideen sollten folgende Kriterien erfüllen:<br><br>
+            - Kritische Reflexion: Die Lernenden sollen ihre eigene Medien- und Technologienutzung reflektieren und sich mit den gesellschaftlichen, ethischen und technischen Auswirkungen auseinandersetzen.<br>
+            - Partizipation und Zusammenarbeit: Die Lernenden sollen gemeinsam an Projekten arbeiten, sich austauschen und voneinander lernen, wobei die Bibliothek als Lernraum genutzt wird.<br>
+            - Kreative Medienproduktion: Die Lernenden sollen ein mediales Produkt entwickeln (z. B. Videos, Podcasts, interaktive Geschichten), das ihre Technologienutzung reflektiert.<br>
+            - Technologie bewusst hinterfragen: Die Lernenden sollen die Grenzen und Herausforderungen der Technologien untersuchen, z. B. in Bezug auf Datenschutz, Fake News oder digitale Identitäten.<br>
+            - Niederschwellig und spielerisch: Die Ideen sollten Spaß machen, zugänglich sein und den informellen, offenen Charakter von Bibliotheksangeboten unterstützen.
+        
+            </p>
+        </div>
 
-        <h3>Kriterien zur Ideengenerierung:</h3>
-        <ul>
-            <li><strong>Kritische Reflexion:</strong> Die Lernenden sollen ihre eigene Medien- und Technologienutzung reflektieren und sich mit den gesellschaftlichen, ethischen und technischen Auswirkungen auseinandersetzen.</li>
-            <li><strong>Partizipation und Zusammenarbeit:</strong> Die Lernenden sollen gemeinsam an Projekten arbeiten, sich austauschen und voneinander lernen, wobei die Bibliothek als Lernraum genutzt wird.</li>
-            <li><strong>Kreative Medienproduktion:</strong> Die Lernenden sollen ein mediales Produkt entwickeln (z. B. Videos, Podcasts, interaktive Geschichten), das ihre Technologienutzung reflektiert.</li>
-            <li><strong>Technologie bewusst hinterfragen:</strong> Die Lernenden sollen die Grenzen und Herausforderungen der Technologien untersuchen, z. B. in Bezug auf Datenschutz, Fake News oder digitale Identitäten.</li>
-            <li><strong>Niederschwellig und spielerisch:</strong> Die Ideen sollten Spaß machen, zugänglich sein und den informellen, offenen Charakter von Bibliotheksangeboten unterstützen.</li>
-        </ul>
-
-        <!-- Button zum Kopieren des kompletten Prompts -->
         <button id="copyButton">Text kopieren</button>
 
     </main>
@@ -36,45 +40,6 @@
     <footer class="container">
         <small>Erstellt für das Netzwerk Medienbildung in Bibliotheken von Nele Hirsch (ebildungslabor) • Lizenz: <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de">CC0 1.0</a></small>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Daten aus dem lokalen Speicher abrufen
-            const topic = localStorage.getItem('topic') || '[Thema eingeben]';
-            const understanding = localStorage.getItem('understanding') || '[Verständnis eingeben]';
-            const skills = localStorage.getItem('skills') || '[Kompetenzen eingeben]';
-            const reflection = localStorage.getItem('reflection') || '[Reflexion eingeben]';
-
-            // Prompt-Text generieren
-            const promptText = `
-Es soll eine Lernveranstaltung konzipiert werden zum Thema: ${topic}.
-Lernziele sind insbesondere:
-1. Ein grundsätzliches Verständnis der Technologie, insbesondere ein Verständnis, dass ${understanding}.
-2. Anwendungs- und Nutzungskompetenz, wozu insbesondere gehört: ${skills}.
-3. Reflexion zu den Gestaltungsmöglichkeiten und gesamtgesellschaftlichen Folgen unter Berücksichtigung von: ${reflection}.
-
-Bitte generiere eine Liste mit 15 kreativen, prägnant formulierten Ideen für Lernangebote, die in non-formalen Umgebungen wie Bibliotheken umgesetzt werden können. Die Ideen sollten folgende Kriterien erfüllen:
-
-- Kritische Reflexion: Die Lernenden sollen ihre eigene Medien- und Technologienutzung reflektieren und sich mit den gesellschaftlichen, ethischen und technischen Auswirkungen auseinandersetzen.
-- Partizipation und Zusammenarbeit: Die Lernenden sollen gemeinsam an Projekten arbeiten, sich austauschen und voneinander lernen, wobei die Bibliothek als Lernraum genutzt wird.
-- Kreative Medienproduktion: Die Lernenden sollen ein mediales Produkt entwickeln (z. B. Videos, Podcasts, interaktive Geschichten), das ihre Technologienutzung reflektiert.
-- Technologie bewusst hinterfragen: Die Lernenden sollen die Grenzen und Herausforderungen der Technologien untersuchen, z. B. in Bezug auf Datenschutz, Fake News oder digitale Identitäten.
-- Niederschwellig und spielerisch: Die Ideen sollten Spaß machen, zugänglich sein und den informellen, offenen Charakter von Bibliotheksangeboten unterstützen.
-`;
-
-            // Den generierten Prompt in das Textfeld einfügen
-            const resultTextArea = document.getElementById('resultTextArea');
-            resultTextArea.value = promptText;
-
-            // Kopierfunktion für den gesamten Text
-            const copyButton = document.getElementById('copyButton');
-            copyButton.addEventListener('click', function () {
-                resultTextArea.select();
-                document.execCommand('copy');
-                alert('Text wurde kopiert!');
-            });
-        });
-    </script>
 
 </body>
 
