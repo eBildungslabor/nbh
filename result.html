@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <script src="js/common.js" defer></script>
+    <title>Dein Ergebnis</title>
+</head>
+
+<body>
+
+    <main class="container">
+        <h1>Dein Ergebnis</h1>
+
+        <p>Hier ist eine Beschreibung des Lernvorhabens, die du als Grundlage zur Konzeption deiner Lernveranstaltung gemeinsam mit Kolleg*innen nutzen kannst. Du kannst dir den Text auch kopieren und als Eingabe für ein KI-Sprachmodell nutzen.</p>
+
+        <div id="resultContainer">
+            <p id="resultText">
+                Es soll eine Lernveranstaltung konzipiert werden zum Thema: <span id="outputTopic"></span>.<br>
+                Lernziele sind insbesondere:<br>
+                1. Ein grundsätzliches Verständnis der Technologie. Insbesondere ein Verständnis, dass <span id="outputUnderstanding"></span>.<br>
+                2. Anwendungs- und Nutzungskompetenz, wozu insbesondere gehört: <span id="outputSkills"></span>.<br>
+                3. Reflexion zu den Gestaltungsmöglichkeiten und gesamtgesellschaftlichen Folgen unter Berücksichtigung von: <span id="outputReflection"></span>.<br>
+            </p>
+        </div>
+
+        <button id="copyButton">Text kopieren</button>
+
+    </main>
+
+    <footer class="container">
+        <small>Erstellt für das Netzwerk Medienbildung in Bibliotheken von Nele Hirsch (ebildungslabor) • Lizenz: <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de">CC0 1.0</a></small>
+    </footer>
+
+</body>
+
+</html>
