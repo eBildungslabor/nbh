@@ -14,24 +14,36 @@
     <main class="container">
         <h1>Dein Ergebnis</h1>
 
-        <p>Hier ist eine Beschreibung des Lernvorhabens, die du als Grundlage zur Konzeption deiner Lernveranstaltung gemeinsam mit Kolleg*innen nutzen kannst. Du kannst dir den Text auch kopieren und als Eingabe für ein KI-Sprachmodell nutzen.</p>
+        <p>Hier ist eine Beschreibung des Lernvorhabens, die du als Grundlage zur Konzeption deiner Lernveranstaltung gemeinsam mit Kolleg*innen nutzen kannst. Du kannst dir den Text auch kopieren und als Eingabe für ein KI-Sprachmodell nutzen, um Ideen zu generieren.</p>
 
         <div id="resultContainer">
+            <h2>Prompt für die Ideengenerierung</h2>
             <p id="resultText">
-                Es soll ein Lernangebot konzipiert werden zum Thema: <span id="outputTopic"></span>.<br>
+                Es soll eine Lernveranstaltung konzipiert werden zum Thema: <span id="outputTopic"></span>.<br>
                 Lernziele sind insbesondere:<br>
-                1. Ein grundsätzliches Verständnis der Technologie. Insbesondere ein Verständnis, dass <span id="outputUnderstanding"></span>.<br>
+                1. Ein grundsätzliches Verständnis der Technologie, insbesondere ein Verständnis, dass <span id="outputUnderstanding"></span>.<br>
                 2. Anwendungs- und Nutzungskompetenz, wozu insbesondere gehört: <span id="outputSkills"></span>.<br>
                 3. Reflexion zu den Gestaltungsmöglichkeiten und gesamtgesellschaftlichen Folgen unter Berücksichtigung von: <span id="outputReflection"></span>.<br>
-            <br>Wichtig ist, dass Lernende ausgehend von ihrer eigenen Technologienutzung reflektieren, dass sie sich mit anderen austauschen und voneinander und miteinander lernen, dass sie ein konkretes mediales Produkt entwickeln oder dass sie bewusst die Grenzen der Technologie erkunden. Schreibe eine Liste mit 15 möglichen prägnant formulierten und kreativen Ideen, an denen wir weiterdenken können.
-
             </p>
-            
+
+            <h3>Kriterien zur Ideengenerierung:</h3>
+            <p>Bitte generiere eine Liste mit 15 kreativen, prägnant formulierten Ideen für Lernangebote, die in non-formalen Umgebungen wie Bibliotheken umgesetzt werden können. Die Ideen sollten folgende Kriterien erfüllen:</p>
+            <ul>
+                <li><strong>Kritische Reflexion:</strong> Die Lernenden sollen ihre eigene Medien- und Technologienutzung reflektieren und sich mit den gesellschaftlichen, ethischen und technischen Auswirkungen auseinandersetzen.</li>
+                <li><strong>Partizipation und Zusammenarbeit:</strong> Die Lernenden sollen gemeinsam an Projekten arbeiten, sich austauschen und voneinander lernen, wobei die Bibliothek als Lernraum genutzt wird.</li>
+                <li><strong>Kreative Medienproduktion:</strong> Die Lernenden sollen ein mediales Produkt entwickeln (z. B. Videos, Podcasts, interaktive Geschichten), das ihre Technologienutzung reflektiert.</li>
+                <li><strong>Technologie bewusst hinterfragen:</strong> Die Lernenden sollen die Grenzen und Herausforderungen der Technologien untersuchen, z. B. in Bezug auf Datenschutz, Fake News oder digitale Identitäten.</li>
+                <li><strong>Niederschwellig und spielerisch:</strong> Die Ideen sollten Spaß machen, zugänglich sein und den informellen, offenen Charakter von Bibliotheksangeboten unterstützen.</li>
+            </ul>
+
+            <p>Diese Kriterien sollen sicherstellen, dass die Lernangebote sowohl kreativ als auch kritisch sind und die Teilnehmenden zur aktiven und reflektierten Auseinandersetzung mit digitalen Technologien anregen.</p>
         </div>
 
         <button id="copyButton">Text kopieren</button>
 
     </main>
+
+
 
       <footer class="container">
         <small>Erstellt für das <a href="https://netzwerk-bibliothek.de/de_DE/home">Netzwerk Medienbildung in Bibliotheken</a> von <a href="https://ebildungslabor.de>Nele Hirsch (ebildungslabor)</a> • Lizenz: <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.de">CC0 1.0</a></small>
