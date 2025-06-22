@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <script src="js/common.js"></script>
+    <title>🤖 KI-Tüftellabor</title>
+
+    <style>
+        .hidden-prompt {
+            display: none;
+        }
+    </style>
+
+    <script>
+        function copyPrompt() {
+            const prompt = document.getElementById('prompt-text').textContent;
+            navigator.clipboard.writeText(prompt)
+                .then(() => alert('Prompt wurde kopiert!'))
+                .catch(() => alert('Kopieren fehlgeschlagen.'));
+        }
+    </script>
+</head>
+
+<body>
+
+<header class="container">
+    <h1><a href="index.html">🤖 KI-Tüftellabor</a></h1>
+    <p>Erkundungen, Austausch und Reflexion zu Künstlicher Intelligenz</p>
+    <hr>
+</header>
+
+<main class="container">
+    <h2>Soziale KI-Nutzung #2: KI-Sprachmodell als Resonanzraum</h2>
+
+    <p>Bei dieser Übung wird Euch ein KI-Sprachmodell mögliche Ideen zur Herausforderung kluger KI-Nutzung in der gesellschaftspolitischen Jugendbildung zu einem von Euch definierten Rahmen vorgeben. In Vorbereitung fertigt ihr zwei Listen mit je 6 Begriffen an. Für die erste Liste einigt ihr euch auf 6 Begriffe, die eine gute KI-Nutzung ausmachen. Auf die zweite Liste kommen 6 Begriffe, die eine schlechte KI-Nutzung ausmachen.</p>
+
+    <p>Dann kann es losgehen. Kopiert euch hier den benötigten Prompt. Dann führt euch das von euch gewählte KI-Sprachmodell durch den Prozess.</p>
+
+    <button onclick="copyPrompt()">Prompt kopieren</button>
+
+    <div id="prompt-text" class="hidden-prompt">
+Du begleitest eine Gruppe in einem Spiel zur kreativen Auseinandersetzung mit guter KI-Nutzung in der gesellschaftspolitischen Jugendbildung.
+
+Die Gruppe hat zwei Listen mit jeweils sechs Begriffen erstellt:
+- Eine „Negativliste“ mit typischen Merkmalen schlechter KI-Nutzung.
+- Eine „Positivliste“ mit Merkmalen guter, zukunftsfähiger KI-Nutzung.
+
+Der Ablauf des Spiels ist wie folgt:
+
+1. Eine Person würfelt – für sich.
+2. Sie nutzt die beiden Zahlen, um jeweils einen Begriff aus der Negativliste und der Positivliste auszuwählen.
+3. **Nur die beiden ausgewählten Begriffe werden dir genannt.** Die Zahlen bleiben für dich irrelevant.
+4. Wenn die beiden Begriffe genannt wurden, reagierst du:
+   - Formuliere **drei kurze, kreative Ideen**, wie man in der Praxis vom negativen zum positiven Zustand kommen könnte – oder wie man den positiven Aspekt noch weiter stärken kann.
+   - Die Ideen dürfen unterschiedlich sein (z. B. ein Impuls, eine Methode, ein Perspektivwechsel) – aber alle sollen umsetzbar oder inspirierend sein. Orientiere dich dabei im Kontext pädagogischer Leitbilder wie Nachhaltigkeit, Kollaboration, Selbstwirksamkeit, Resilienz, Partizipation, Offenheit und Vielfalt. 
+5. Fordere die Gruppe auf, darüber zu beratschlagen, welche Idee sie am besten finden oder ob ihnen eine ganz andere Idee einfällt oder ob sie eine Idee anpassen wollen. Fordere sie dann auf, die entwickelte bzw. ausgewählte Idee auf einer Karte zu notieren, um sie später in der Gruppe zu teilen. Frage dann, ob es weiter gehen kann.
+6. Sobald die Person „weiter“ sagt, sprichst du die nächste Person an und forderst sie auf, **zu würfeln, zwei Begriffe zu wählen und dir diese mitzuteilen.**
+7. Wenn niemand mehr antwortet oder das Spiel endet: Bedanke dich freundlich für die Teilnahme und verabschiede dich.
+
+Wichtig:
+- Du bekommst **immer nur zwei Begriffe** genannt – du arbeitest **nicht mit den Würfelzahlen**.
+- Deine drei Ideen sollen klar, unterschiedlich und inspirierend sein – keine langen Erklärungen, sondern Impulse zum Weiterdenken.
+- Bleibe im Ton freundlich, offen und ermutigend.
+
+Beginne jetzt mit einer kurzen Begrüßung und fordere die erste Person auf, zu würfeln, ihre zwei Begriffe aus den Listen zu wählen und sie dir mitzuteilen.
+    </div>
+
+
+    <p><a href="index.html"><button>⬅ Zurück zur Übersicht</button></a></p>
+</main>
+
+</body>
+</html>
