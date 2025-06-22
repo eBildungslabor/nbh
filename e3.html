@@ -1,29 +1,54 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/pico.min.css">
-    <script src="js/common.js" defer></script>
-    <title>Erkundung 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <script src="js/common.js"></script>
+  <title>🤖 KI-Tüftellabor</title>
 </head>
-
 <body>
 
-    <main class="container">
-        <h1>Erkundung 3: Mit einem KI-Sprachmodell einen Begriff oder ein Konzept erschließen</h1>
+<header class="container">
+  <h1><a href="index.html">🤖 KI-Tüftellabor</a></h1>
+  <p>Erkundungen, Austausch und Reflexion zu Künstlicher Intelligenz</p>
+  <hr>
+</header>
 
-        <p>Normalerweise würdest du dir von einem KI-Sprachmodell eine möglichst eindeutige Definition von einem Begriff oder einem Konzept geben lassen. Vielfach kann es aber hilfreicher sein, sich einen Begriff möglichst vielfältig auffächern zu lassen, um dann gut dazu reflektieren, schreiben oder lehren zu können. Das betrifft vor allem Konzepte wie Lernen, Digitalisierung, Teilen, Herausforderung, Resilienz ...:</p>
-      
-        <p>Du kannst für diese Herausforderung das offen nutzbare Tool <a href="https://textfx.withgoogle.com/">TextFX aus dem Google AI Lab</a> ausprobieren. Die Oberfläche ist englisch, aber du kannst auch deutsche Begriffe eingeben.</p>
-    <p> <p><a href="index.html"><button>⬅ Zurück zur Übersicht</button></a></p>
-        <p>Probiert die unterschiedlichen Möglichkeiten mit verschiedenen Begriffen aus. Was nehmt ihr daraus für euch mit?</p>
-    </main>
+<main class="container">
+  <h2>Basics #3: Mit einem KI-Sprachmodell Modellierung üben</h2>
 
-   
+  <p>Modellierung praktizieren meint das bewusste Entwerfen, Erproben und Weiterentwickeln eigener Denk- und Handlungsstrategien ausgehend von bereits bestehenden Kompetenzen und Wissen. Lernende externalisieren mentale Modelle, machen so ihre Überlegungen sichtbar und arbeiten daran weiter.</p>
 
+  <p>Um Modellierung in Interaktion mit KI-Sprachmodellen praktisch auszuprobieren wirst gleich dazu eingeladen, deine eigene These zu guter gesellschaftspolitischer Jugendbildung im Kontext von KI zu formulieren (= Externalisierung deines mentalen Modells) und mit einem KI-Sprachmodell weiterzuentwickeln (= Modellierung). Der folgende Prompt hilft dir dabei.</p>
+
+  <button onclick="copyPrompt()">Prompt kopieren</button>
+
+    <p>
+  <div id="prompt-text" class="hidden-prompt">
+Bitte begleite mich in einem Reflexionsprozess. Ich möchte eine eigene These zu guter gesellschaftspolitischer Jugendbildung im Kontext von KI formulieren und weiterentwickeln. Beginne, indem du mich bittest, meine These aufzuschreiben. Wenn ich die These nenne, gehe dann wie folgt vor:
+
+1. Nenne drei Argumente, die meine These stützen könnten. Frage mich dann, ob ich weitere Argumente möchte oder ob du weitermachen kannst.
+2. Nenne drei Gegenargumente oder Einschränkungen. Frage mich dann, ob ich weitere Gegenargumente möchte oder ob du weitermachen kannst.
+3. Gib mir zwei Fallbeispiele: eines, das die These bestätigt, und eines, das sie widerlegt. Frage mich dann, ob ich weitere Fallbeispiele wünsche oder ob du zum Abschluss kommen kannst.
+4. Bitte mich abschließend, die These auf Basis der Argumente und Beispiele anzupassen. Wenn ich dir eine überarbeitete Version nenne, mache einen Vorschlag für eine alternative Formulierung.
+
+Nutze bitte eine klare, strukturierte Sprache und einen freundlichen, unterstützenden Ton.
+  </div>
+</p>
+  <p><a href="index.html"><button>⬅ Zurück zur Übersicht</button></a></p>
+</main>
+
+
+
+<script>
+  function copyPrompt() {
+    const prompt = document.getElementById('prompt-text').textContent;
+    navigator.clipboard.writeText(prompt)
+      .then(() => alert('Prompt wurde kopiert!'))
+      .catch(() => alert('Kopieren fehlgeschlagen.'));
+  }
+</script>
 
 </body>
-
 </html>
