@@ -1,3 +1,3 @@
-# Kontra-intuitive KI-Nutzung mit dem Lehrservice der Leuphana Universität Lüneburg
+# Kontra-intuitive KI-Nutzung mit der ETOS
 
 Erkundungen zum Ausprobieren
